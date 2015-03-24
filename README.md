@@ -5,7 +5,7 @@ A [RPython][rpython]-compatible helper library for authors of workflows for [Alf
 ## What Is This?
 Alfred can be extended with workflows written in different scripting languages such as [Python][python] or [Ruby][ruby].
 These scripts need to be fast in order to keep Alfred's UI responsive. I wanted to play around with RPython which is a subset
-of Python, so I decided to write a helper library similar to [Alfred-Workflow](alfred-workflow). With the RPython toolchain
+of Python, so I decided to write a helper library similar to [Alfred-Workflow][alfredworkflow]. With the RPython toolchain
 it is possible to translate a RPython program into C which can then be compiled to produce an executable.
 
 ## Demo
@@ -36,7 +36,7 @@ You need [pypy/pypy][pypy] to build your workflows.
 | 10000000    | u: 161.77s s: 1.12s cpu: 99% t: 2:43.36 | u: 17.24s s: 0.11s cpu: 99% t: 17.409 |
 
 [alfred]: http://www.alfredapp.com/
-[alfred-workflow]: http://www.alfredapp.com/
+[alfredworkflow]: https://github.com/deanishe/alfred-workflow
 [euler]: https://projecteuler.net
 [latest]: https://github.com/fniephaus/alfred-rworkflow/releases/latest/
 [pypy]: https://bitbucket.org/pypy/pypy
