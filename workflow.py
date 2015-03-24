@@ -24,16 +24,6 @@ import sys
 import os
 import xml.etree.cElementTree as ET
 
-# <?xml version="1.0" encoding="utf-8"?>
-# <items>
-#     <item autocomplete="install " uid="install" valid="no">
-#         <title>install</title>
-#         <subtitle>Install new packages</subtitle>
-#         <icon>icons/chevron-right-dark.png</icon>
-#     </item>
-# </items>
-
-
 class RWorkflow(object):
     _items = []
     theme_background = None
@@ -56,6 +46,8 @@ class RWorkflow(object):
             children += ['<icon>', icon, '</icon>']
 
         self._items += ['<item']
+        if arg:
+            self._items += [' arg="%s"' % arg]
         if autocomplete:
             self._items += [' autocomplete="%s"' % autocomplete]
         if uid:
