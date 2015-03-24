@@ -10,6 +10,8 @@ it is possible to translate a RPython program into C which can then be compiled 
 
 ## Demo
 
+For demonstration purposes, I put together a workflow that solves four problems from [Project Euler][euler]:
+
 ![Demo](./demo.gif)
 
 [Try it out yourself!][latest]
@@ -35,6 +37,7 @@ You need [pypy/pypy][pypy] for building your workflows.
 
 [alfred]: http://www.alfredapp.com/
 [alfred-workflow]: http://www.alfredapp.com/
+[euler]: https://projecteuler.net
 [latest]: https://github.com/fniephaus/alfred-rworkflow/releases/latest/
 [pypy]: https://bitbucket.org/pypy/pypy
 [python]: https://www.python.org/
