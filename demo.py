@@ -106,33 +106,38 @@ def main(args):
             wf.add_item(
                 title="Answer 1: %s" % result1,
                 subtitle="Find the sum of all the multiples of 3 or 5 below %s." % number,
-                arg=result1,
+                arg=str(result1),
                 valid=True
             )
             result2 = problem2(number)
             wf.add_item(
                 title="Answer 2: %s" % problem2(number),
                 subtitle="Find the sum of the even Fibonacci values that do not exceed %s." % number,
-                arg=result2,
+                arg=str(result2),
                 valid=True
             )
             result3 = problem3(number)
             wf.add_item(
                 title="Answer 3: %s" % problem3(number),
                 subtitle="What is the largest prime factor of the number %s ?" % number,
-                arg=result3,
+                arg=str(result3),
                 valid=True
             )
             result10 = problem10(number)
             wf.add_item(
                 title="Answer 10: %s" % problem10(number),
                 subtitle="The sum of all the primes below %s." % number,
-                arg=result10,
+                arg=str(result10),
                 valid=True
             )
         except ValueError:
-            pass
+            wf.add_item(
+                title="Invalid input" ,
+                subtitle="%s is not a number." % args[1],
+                valid=False
+            )
 
+    # Add execution time for benchmarking purposes
     execution_time = str((time() - start) * 1000)
     offset = execution_time.find('.') + 5
     assert offset > 0
