@@ -20,9 +20,8 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-import sys
 import os
-import xml.etree.cElementTree as ET
+
 
 class RWorkflow(object):
     _items = []
@@ -35,9 +34,18 @@ class RWorkflow(object):
                  autocomplete=None, valid=False, uid=None, icon=None,
                  icontype=None, type=None, largetext=None, copytext=None):
 
-        valid = 'yes' if valid else 'no'
-        uid = uid if uid else autocomplete
+        # prepare <item>
+        item_start = ['<item']
+        if arg:
+            item_start += [' arg="%s"' % arg]
+        if autocomplete:
+            item_start += [' autocomplete="%s"' % autocomplete]
+        if uid:
+            item_start += [' uid="%s"' % uid]
 
+        item_start += [' valid="%s">' % ('yes' if valid else 'no')]
+
+        # prepare children
         children = [
             '<title>', title, '</title>',
             '<subtitle>', subtitle, '</subtitle>'
@@ -45,14 +53,8 @@ class RWorkflow(object):
         if icon:
             children += ['<icon>', icon, '</icon>']
 
-        self._items += ['<item']
-        if arg:
-            self._items += [' arg="%s"' % arg]
-        if autocomplete:
-            self._items += [' autocomplete="%s"' % autocomplete]
-        if uid:
-            self._items += [' uid="%s"' % uid]
-        self._items += [' valid="%s">' % valid]  + children + ['</item>']
+        # add <item /> node
+        self._items += item_start + children + ['</item>']
 
     def send_feedback(self):
         print '<?xml version="1.0" encoding="utf-8"?>'
