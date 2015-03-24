@@ -23,15 +23,15 @@ You need [pypy/pypy][pypy] for building your workflows.
 ```
 
 ## Benchmarks
-| Input       | CPython                                         | RPython                                       |                  
-| -----------:|:-----------------------------------------------:|:---------------------------------------------:|
-| 10          | 0.01s user 0.01s system 91% cpu 0.026 total     | 0.00s user 0.00s system 56% cpu 0.004 total   |
-| 100         | 0.01s user 0.01s system 91% cpu 0.026 total     | 0.00s user 0.00s system 57% cpu 0.004 total   |
-| 1000        | 0.02s user 0.01s system 92% cpu 0.028 total     | 0.00s user 0.00s system 59% cpu 0.004 total   |
-| 10000       | 0.04s user 0.01s system 95% cpu 0.047 total     | 0.00s user 0.00s system 68% cpu 0.005 total   |
-| 100000      | 0.35s user 0.01s system 98% cpu 0.368 total     | 0.03s user 0.00s system 93% cpu 0.037 total   |
-| 1000000     | 6.85s user 0.06s system 99% cpu 6.929 total     | 0.67s user 0.01s system 99% cpu 0.685 total   |
-| 10000000    | 161.77s user 1.12s system 99% cpu 2:43.36 total | 17.24s user 0.11s system 99% cpu 17.409 total |
+| Input       | CPython                                 | RPython                               |                  
+| -----------:|:---------------------------------------:|:-------------------------------------:|
+| 10          | u: 0.01s s: 0.01s cpu: 91% t: 0.026     | u: 0.00s s: 0.00s cpu: 56% t: 0.004   |
+| 100         | u: 0.01s s: 0.01s cpu: 91% t: 0.026     | u: 0.00s s: 0.00s cpu: 57% t: 0.004   |
+| 1000        | u: 0.02s s: 0.01s cpu: 92% t: 0.028     | u: 0.00s s: 0.00s cpu: 59% t: 0.004   |
+| 10000       | u: 0.04s s: 0.01s cpu: 95% t: 0.047     | u: 0.00s s: 0.00s cpu: 68% t: 0.005   |
+| 100000      | u: 0.35s s: 0.01s cpu: 98% t: 0.368     | u: 0.03s s: 0.00s cpu: 93% t: 0.037   |
+| 1000000     | u: 6.85s s: 0.06s cpu: 99% t: 6.929     | u: 0.67s s: 0.01s cpu: 99% t: 0.685   |
+| 10000000    | u: 161.77s s: 1.12s cpu: 99% t: 2:43.36 | u: 17.24s s: 0.11s cpu: 99% t: 17.409 |
 
 [alfred]: http://www.alfredapp.com/
 [alfred-workflow]: http://www.alfredapp.com/
