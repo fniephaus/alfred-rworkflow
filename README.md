@@ -17,7 +17,7 @@ For demonstration purposes, I put together a workflow that solves four problems 
 [Try it out yourself!][latest]
 
 ## Requirements
-You need [pypy/pypy][pypy] for building your workflows.
+You need [pypy/pypy][pypy] to build your workflows.
 
 ## Building
 ```bash
