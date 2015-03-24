@@ -27,6 +27,7 @@ from time import time
 
 from workflow import RWorkflow
 
+
 # see https://projecteuler.net/overview=001
 def problem1(n):
     result = 0
@@ -34,6 +35,7 @@ def problem1(n):
         if i % 3 == 0 or i % 5 == 0:
             result += i
     return result
+
 
 # see https://projecteuler.net/overview=002
 def problem2(n):
@@ -47,6 +49,7 @@ def problem2(n):
         a = b
         b = tmp
     return result
+
 
 # see https://projecteuler.net/overview=003
 def problem3(n):
@@ -132,7 +135,7 @@ def main(args):
             )
         except ValueError:
             wf.add_item(
-                title="Invalid input" ,
+                title="Invalid input",
                 subtitle="%s is not a number." % args[1],
                 valid=False
             )
